@@ -13,6 +13,7 @@
 - **Mit der KI sprechen oder schreiben:** Kinder und Jugendliche reden heute täglich mit KI über ihre Aufgaben, per Chat und zunehmend per Sprache: ChatGPT, Gemini und in Deutschland vor allem **Knowunity**.
 - **Eigene Aufgaben hochladen:** Ein Foto der Aufgabe, ein PDF oder eine Seite aus dem Heft hochladen und dazu eine Erklärung bekommen, das können praktisch alle großen Angebote.
 - **Am nächsten an unserer Idee ist Knowunity.** Die App bietet einen KI-Chat rund um die Uhr mit Sprachmodus und einen Foto-Scan jeder Aufgabe. Eigene PDFs, Folien, Fotos und handschriftliche Notizen lassen sich hochladen. Dazu kommen ein Tag-für-Tag-Lernplan bis zur Prüfung auf Basis offizieller Lehrpläne und KI-bewertete Probeklausuren.
+- **Eigener Test von Knowunity (Okt. 2026):** Knowunity ist eine eigenständige Lernplattform. Man wählt Inhalte aus Katalogen und folgt einem vorgefertigten Strukturplan; Hochladen ist möglich. Das ist eine Lern-App, keine Nachhilfe. Eine Stunde, die vom heutigen Unterricht ausgeht und in der der Tutor das Kind führt, bietet Knowunity nicht.
 - **Nicht gefunden habe ich** einen deutschen Schul-Tutor, der all das verbindet: eine **sprechende Figur mit Tafel**, ein **Gedächtnis über das Schuljahr** aus dem echten Unterrichtsmaterial, **selbst geführte Lerneinheiten** statt reiner Frage-Antwort, ein Angebot gezielt **für Kinder unter 13** mit Eltern-Einwilligung und ein **Eltern-Cockpit**.
 
 ---
@@ -65,6 +66,7 @@
    - Bei Kindern entscheiden und zahlen die Eltern. **Vertrauen, Einwilligung und das Eltern-Cockpit** werden damit zum Kaufgrund.
    - Einschränkung: Wie gut Knowunity und andere jüngere Kinder heute schon bedienen, habe ich nicht geprüft. Knowunity ist im App Store ab 4 Jahren freigegeben.
 4. **Knowunity ist der Maßstab.** Wer in Deutschland antritt, muss klar sagen können, was er besser kann. Mögliche Antworten:
+   - **Nachhilfe statt Lern-App:** Der Tutor führt durch den heutigen Unterrichtsstoff (Wiederholung, Hausaufgaben, Übungen, Minitest), statt dass das Kind aus Katalogen wählt und einem Strukturplan folgt. Nach dem eigenen Test ist das der klarste Unterschied (siehe Konzept, Kap. 2.0).
    - Zielgruppe: jüngere Kinder
    - Erlebnis: Figur, Stimme, Tafel
    - Didaktische Tiefe: selbst geführte Lerneinheiten, Fehlerdiagnose, Schuljahres-Gedächtnis

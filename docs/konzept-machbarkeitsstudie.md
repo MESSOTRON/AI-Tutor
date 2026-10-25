@@ -1,12 +1,14 @@
 # KI-Tutor – Konzept & Machbarkeitsstudie
 
-**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.2 (Diskussionsgrundlage, Wettbewerb nach Marktrecherche aktualisiert)
+**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.3 (Diskussionsgrundlage; Kernprodukt „geführte Nachhilfestunde“ geschärft)
 
 ---
 
 ## 0. Management Summary
 
 **Die Idee:** Eine KI-Nachhilfe-Plattform für Schüler:innen, die sich am *tatsächlichen* Unterricht orientiert. Die Kinder fotografieren Hefteinträge, Arbeitsblätter, Hausaufgaben und Schulbuchseiten. Daraus erkennt die KI, was gerade im Unterricht dran ist. Sie gleicht das mit dem Lehrplan ab, stellt passende Übungen, kontrolliert Hausaufgaben, erklärt bei Fehlern nach und zeigt am Beispiel der Hobbys des Kindes, wofür man den Stoff im echten Leben braucht. Erklärt wird per Sprache, mit einer Figur (Avatar) und einer digitalen Tafel.
+
+**Der Kern ist Nachhilfe, keine Lern-App:** Das Kind kommt aus der Schule, öffnet die App und fotografiert Hefteintrag und Hausaufgaben. Ab da **führt der Tutor**: Er wiederholt den Stoff, begleitet die Hausaufgaben, gibt Übungsaufgaben und schließt mit einem Minitest ab, wie eine Nachhilfelehrkraft. Das Kind muss keine Inhalte aus Katalogen auswählen und keinem vorgefertigten Strukturplan folgen. Der heutige Unterricht bestimmt das Thema (Kap. 2.0).
 
 **Kurzfazit:**
 
@@ -16,7 +18,7 @@
 | Ist sie technisch machbar? | **Ja, zum Großteil schon heute.** Etwa 80 % der Vision lassen sich mit heute verfügbarer Technik bauen. Schwierig ist weniger die KI selbst als das, was drumherum nötig ist: Lehrplandaten, didaktische Qualität, Fehlerkontrolle, Datenschutz für Kinder und Kosten pro Nutzer. |
 | Was geht (noch) nicht? | Eine „allwissende, fehlerfreie“ KI gibt es nicht. Fotorealistische Video-Avatare in Echtzeit sind für ein Endkunden-Abo heute zu teuer. KI-generierte Klassenzimmer-Videos in Echtzeit sind noch nicht praxistauglich. |
 | Ist es ein Selbstläufer? | **Nein.** Der Markt ist voll: Knowunity, Cornelsen/Duden, Klett, simpleclub, StudySmarter, Khanmigo sowie die kostenlosen Lernmodi von ChatGPT, Gemini und Claude. Den Unterschied machen Fokus, didaktische Qualität, Vertrauen der Eltern und der Vertrieb. |
-| Empfehlung | **Bauen, aber fokussiert:** Start mit **Mathematik Klasse 5–10** in **einem Bundesland**. Foto-Upload, Chat, Sprache und Klassenarbeits-Plan sind inzwischen Standard (siehe [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md)). Der Unterschied muss aus dem Gedächtnis über das Schuljahr, der didaktischen Tiefe und einem sprechenden, figurbasierten Tutor kommen, voraussichtlich mit Fokus auf **jüngere Kinder (ca. 8–13)**, die von ChatGPT & Co. weitgehend ausgeschlossen sind. Avatar als **gezeichnete Figur** (günstig, kindgerecht), kein fotorealistischer Mensch. Erst ein Prototyp mit 15–30 Test-Kindern, dann die Entscheidung über das große Budget. |
+| Empfehlung | **Bauen, aber fokussiert:** Start mit **Mathematik Klasse 5–10** in **einem Bundesland**. Foto-Upload, Chat, Sprache und Klassenarbeits-Plan sind inzwischen Standard (siehe [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md)). Der Unterschied ist die **geführte Nachhilfestunde zum heutigen Unterrichtsstoff** statt einer Lernplattform, auf der das Kind Inhalte aus Katalogen wählt und einem Strukturplan folgt. Dazu kommen das Gedächtnis über das Schuljahr und ein sprechender, figurbasierter Tutor, voraussichtlich mit Fokus auf **jüngere Kinder (ca. 8–13)**, die von ChatGPT & Co. weitgehend ausgeschlossen sind. Avatar als **gezeichnete Figur** (günstig, kindgerecht), kein fotorealistischer Mensch. Erst ein Prototyp mit 15–30 Test-Kindern, dann die Entscheidung über das große Budget. |
 
 **Ampel nach Bausteinen** (Details in Kapitel 5):
 
@@ -53,7 +55,48 @@ Dieses Szenario lässt sich mit heutiger Technik vollständig bauen.
 
 ---
 
-## 2. Funktionsumfang (Module)
+## 2. Kernprodukt und Funktionsumfang
+
+### 2.0 Kernprodukt: die geführte Nachhilfestunde
+
+**Lern-App oder Nachhilfe?** Bestehende Angebote wie Knowunity sind eigenständige Lernplattformen: Das Kind wählt Inhalte aus Katalogen oder legt einen Lernplan an und folgt dann einem vorgefertigten Strukturplan. Hochladen ist möglich, aber das Kind muss selbst wissen, was es tun will. Unser Ansatz dreht das um:
+
+| | Lern-App / Lernplattform | Unser Ansatz: Nachhilfe |
+|---|---|---|
+| **Wer bestimmt das Thema?** | Das Kind, per Auswahl aus Katalogen oder Lernplan | Der heutige Unterricht: Was das Kind fotografiert, ist das Thema |
+| **Wer führt?** | Das Kind steuert, die App folgt einem vorgefertigten Strukturplan | Der Tutor führt Schritt für Schritt, wie eine Nachhilfelehrkraft |
+| **Typischer Einstieg** | „Was willst du lernen?“ | „Zeig mir, was ihr heute gemacht habt.“ |
+| **Hausaufgaben** | Einzelne Aufgabe scannen, Lösungsweg ansehen | Kind löst selbst, Tutor begleitet und kontrolliert |
+| **Ende** | offen | Minitest, kurze Zusammenfassung, Plan für die nächste Wiederholung |
+| **Für wen?** | Kinder, die sich selbst organisieren können | gerade auch Kinder, die Struktur brauchen, also die typischen Nachhilfe-Kinder |
+
+**Warum das wichtig ist:** Kinder, die Nachhilfe brauchen, scheitern oft nicht nur am Stoff. Sie wissen nicht, wo sie anfangen sollen, was sie wiederholen müssen und wann sie etwas wirklich können. Eine Lernplattform setzt genau diese Selbststeuerung voraus. Eine geführte Stunde nimmt sie dem Kind ab und baut sie nach und nach auf.
+
+**Ablauf einer Stunde** (ca. 20–40 Minuten):
+
+| Phase | Was passiert | Dauer |
+|---|---|---|
+| 1. Ankommen und Erfassen | Das Kind fotografiert Hefteintrag, Arbeitsblatt oder Buchseite und die Hausaufgabe. Der Tutor erkennt das Thema, ordnet es in den Lehrplan ein und knüpft daran an: *„Ihr habt heute mit Prozentrechnung angefangen.“* | 2–3 Min. |
+| 2. Aufwärmen | 2–3 kurze Fragen zu früheren Themen, die zur Wiederholung fällig sind | 2–3 Min. |
+| 3. Kurz-Check | 2–3 Fragen zum neuen Thema: Was hat das Kind verstanden? Danach entscheidet der Tutor, ob er erklärt oder direkt zu den Hausaufgaben geht | 2–3 Min. |
+| 4. Erklären und Wiederholen | Nur bei Bedarf. Die Erklärung knüpft am Hefteintrag an (Begriffe und Schreibweise der Lehrkraft), mit Tafel, Stimme und Praxisbeispiel. Lücken im Vorwissen werden geschlossen | 5–10 Min. |
+| 5. Hausaufgaben begleiten | Das Kind löst selbst auf Papier. Der Tutor hilft in Stufen, kontrolliert per Foto und findet die Ursache von Fehlern | 5–15 Min. |
+| 6. Üben | 3–6 ähnliche Aufgaben mit steigender Schwierigkeit und Hobbybezug, gezielt auf die heute erkannten Fehler | 5–10 Min. |
+| 7. Minitest | 3–5 Aufgaben ohne Hilfe, mit kurzer Auswertung | 3–5 Min. |
+| 8. Abschluss | Lob für die Anstrengung, Zusammenfassung in zwei Sätzen, Ausblick auf die nächste Wiederholung, Kurzbericht an die Eltern | 1–2 Min. |
+
+**Der Tutor passt die Stunde an:**
+- **Kind kann das Thema schon:** Erklären überspringen, direkt zu den Hausaufgaben, anspruchsvollere Übungen.
+- **Kind hat wenig Zeit** („Ich muss gleich zum Training“): nur Hausaufgaben mit Begleitung. Übungen und Minitest kommen in der nächsten Stunde.
+- **Kind scheitert wiederholt:** zurück zum Vorwissen (z. B. Brüche vor Prozentrechnung) und kleinere Schritte.
+- **Heute keine Hausaufgaben:** Die Stunde läuft mit dem Hefteintrag, also Wiederholen, Üben und Minitest.
+- **Nichts fotografiert:** Der Tutor fragt nach dem Thema oder schlägt eine fällige Wiederholung vor.
+
+**Zwischen den Stunden:** Minitest-Ergebnisse und Fehler fließen ins Schülermodell (2.3). Daraus entstehen das Aufwärmen der nächsten Stunde, die Wiederholungen und später der Klassenarbeits-Plan (2.9). So baut sich der Lernstand über das Schuljahr automatisch aus dem echten Unterricht auf, ohne dass das Kind etwas aus Katalogen auswählen muss.
+
+**Technische Folge:** Die Stunde wird von einer festen Ablaufsteuerung im Tutor-Orchestrator gelenkt (Kap. 4.1), nicht von einem freien Chat. Das Sprachmodell füllt die Phasen mit Inhalt, die Struktur gibt der Code vor. Das macht die Stunde verlässlich und messbar.
+
+Die folgenden Module 2.1–2.9 sind die Bausteine dieser Stunde.
 
 ### 2.1 Stoff-Erfassung (Foto-Input)
 - **Was rein kann:** Buchseiten, Arbeitsblätter, Hefteinträge, Tafelbilder, Hausaufgaben, korrigierte Klassenarbeiten.
@@ -178,7 +221,7 @@ flowchart LR
 ```
 
 ### 4.1 Kernkomponenten
-- **Tutor-Orchestrator:** steuert die Lernsitzung (Phasen: Diagnose → Erklären → Üben → Wiederholen) und ruft Werkzeuge auf. Die Didaktik steckt in Code und Regeln, nicht nur in einem Prompt. Das macht den Tutor berechenbar.
+- **Tutor-Orchestrator:** steuert die geführte Stunde (Phasen aus Kap. 2.0: Erfassen → Aufwärmen → Kurz-Check → Erklären → Hausaufgaben → Üben → Minitest → Abschluss) und ruft Werkzeuge auf. Die Didaktik steckt in Code und Regeln, nicht nur in einem Prompt. Das macht den Tutor berechenbar.
 - **Modell-Aufteilung:** Ein **kleines, schnelles Modell** führt den laufenden Dialog (günstig, kurze Antwortzeit). Ein **großes Modell** übernimmt Bildanalyse, Fehlerdiagnose, schwierige Erklärungen und Qualitätsprüfung. Die Architektur sollte **anbieterunabhängig** sein (Claude, OpenAI, Gemini, Mistral als EU-Anbieter usw.), damit Preise und Qualität laufend optimiert werden können.
 - **Prüf-Werkzeuge:** Computer-Algebra (z. B. SymPy) und Code-Ausführung prüfen Rechnungen und erzeugte Aufgaben. Das ist der wichtigste Hebel gegen KI-Fehler in MINT-Fächern.
 - **Sicherheits-Filter:** prüft Ein- und Ausgaben auf Themenrelevanz, Altersgerechtigkeit, Gefährdungsanzeichen (Kap. 6) und Prompt-Manipulation.
@@ -305,7 +348,7 @@ flowchart LR
 
 | Anbieter | Was sie machen | Stärke | Lücke / Angriffspunkt |
 |---|---|---|---|
-| **Knowunity** (Berlin) | Lern-App mit KI-Begleiter: 24/7-Chat mit Sprachmodus, Foto-Scan jeder Aufgabe, Upload eigener PDFs/Fotos/Notizen, Lernplan bis zur Prüfung nach Lehrplan, KI-bewertete Probeklausuren. Nach eigenen Angaben 30 Mio.+ Schüler:innen, Series B 27 Mio. € (2025) | Reichweite, Funktionsumfang, Kern kostenlos | **Der direkte Maßstab.** Keine sprechende Figur bekannt; wie tief Didaktik, Gedächtnis und Elternrolle gehen, ist ungeprüft |
+| **Knowunity** (Berlin) | Lern-App mit KI-Begleiter: 24/7-Chat mit Sprachmodus, Foto-Scan jeder Aufgabe, Upload eigener PDFs/Fotos/Notizen, Lernplan bis zur Prüfung nach Lehrplan, KI-bewertete Probeklausuren. Nach eigenen Angaben 30 Mio.+ Schüler:innen, Series B 27 Mio. € (2025) | Reichweite, Funktionsumfang, Kern kostenlos | **Der direkte Maßstab.** Eigener Test (Okt. 2026): eigenständige Lernplattform, auf der man Inhalte aus Katalogen wählt und einem vorgefertigten Strukturplan folgt; Hochladen ist möglich. **Keine geführte Nachhilfestunde, die vom heutigen Unterricht ausgeht.** Keine sprechende Figur bekannt |
 | **Cornelsen / Duden Learnattack** | KI-Tutor „Kim“ (auch per WhatsApp), Übernahme des KI-Startups ezri (2025) | Verlagsinhalte, Marke | Verlagslogik, eigene Bücher im Fokus |
 | **Klett** (x Studyly) | KI-LernCoach Mathe mit Analyse einzelner Rechenschritte (didacta 2026) | Didaktische Qualität, Lehrwerksbindung | Vor allem an eigene Lehrwerke gebunden |
 | **simpleclub, StudySmarter, sofatutor** | Videos, Karteikarten, Lernpläne, zunehmend mit KI | Inhalte, Bekanntheit | Erklär-Content statt persönlicher Tutor |
@@ -315,10 +358,10 @@ flowchart LR
 
 **Die eigentliche Konkurrenz sind Knowunity und die kostenlosen Universal-KIs.** Jedes Kind ab 13 kann heute ein Aufgabenfoto in ChatGPT laden, und Knowunity deckt Foto, Chat, Sprache und Prüfungsplan bereits ab. Die Plattform muss also klar mehr bieten als „Foto rein, Erklärung raus“. Details: [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md).
 
-**Mögliche Alleinstellungsmerkmale (in dieser Reihenfolge, nach Marktrecherche überarbeitet):**
-1. **Für jüngere Kinder gebaut (ca. 8–13):** sprechende Figur, Tafel, wenig Text, Einwilligung und Steuerung durch die Eltern. Diese Altersgruppe bedienen die Universal-KIs wegen ihrer Altersgrenzen kaum.
-2. **Unterrichts-Synchronität + Gedächtnis über das ganze Schuljahr:** Der Tutor weiß, was gerade dran ist, was das Kind kann und was in der nächsten Arbeit kommt.
-3. **Didaktisch geführte Lerneinheiten statt Frage-Antwort.** Das Versprechen an die Eltern: „Ihr Kind lernt wirklich.“
+**Mögliche Alleinstellungsmerkmale (in dieser Reihenfolge, nach Marktrecherche und eigenem Test überarbeitet):**
+1. **Geführte Nachhilfestunde zum heutigen Unterrichtsstoff (Kap. 2.0):** Das Kind fotografiert, der Tutor führt durch Wiederholung, Hausaufgaben, Übungen und Minitest. Es wählt nichts aus Katalogen aus. Das Versprechen an die Eltern: „Wie eine Nachhilfestunde, jeden Tag, zum Stoff von heute.“
+2. **Gedächtnis über das ganze Schuljahr:** Der Tutor weiß aus den Stunden, was dran war, was das Kind kann und was in der nächsten Arbeit kommt.
+3. **Für jüngere Kinder gebaut (ca. 8–13):** sprechende Figur, Tafel, wenig Text, Einwilligung und Steuerung durch die Eltern. Diese Altersgruppe bedienen die Universal-KIs wegen ihrer Altersgrenzen kaum.
 4. **Vertrauen:** deutsch, DSGVO-konform, kein Training auf Kinderdaten, Eltern-Cockpit.
 5. **Erlebnis:** Maskottchen, Stimme, Tafel, Hobby-Bezug. Das ist der Grund, warum Kinder freiwillig wiederkommen.
 
@@ -346,7 +389,7 @@ Der **Klassenarbeits-Trainer** bleibt eine wichtige Funktion, ist aber im Markt 
 ## 11. Umsetzungsplan
 
 ### Phase 0: Prototyp und Machbarkeitsnachweis (6–8 Wochen)
-- **Umfang:** Mathe, eine Klassenstufe (z. B. 7), ein Bundesland, eine Schulform. Foto → Themenerkennung → Übungen → Korrektur → Erklärung, mit Text und Sprache, als einfache Web-App mit statischer Maskottchen-Grafik.
+- **Umfang:** Mathe, eine Klassenstufe (z. B. 7), ein Bundesland, eine Schulform. Eine vollständige geführte Stunde (Kap. 2.0): Foto → Thema erkennen → Kurz-Check → Erklären → Hausaufgabe begleiten → Üben → Minitest. Mit Text und Sprache, als einfache Web-App mit statischer Maskottchen-Grafik.
 - **Test:** 15–30 Kinder, z. B. aus dem Umfeld der eigenen Mitarbeiter (20 Familien = idealer erster Testerkreis).
 - **Messen:** Wie oft ist die KI fachlich falsch? Wie gut wird Handschrift erkannt? Kommen die Kinder freiwillig wieder? Was sagen die Eltern? Würden sie zahlen?
 - **Team:** 1–2 Entwickler:innen + 1 Mathe-Lehrkraft (Teilzeit). **Budget grob 30–70 T€.**
@@ -394,7 +437,7 @@ Das Vorhaben ist ein eigenständiges Software- und Verbraucher-Geschäft und unt
 ## 13. Nächste Schritte
 
 1. **Fokus festlegen:** Bundesland, Schulform, Klassenstufen für den Start.
-2. **Klickbarer Prototyp + technischer Spike** (Foto → Thema → Übung → Korrektur) mit 20–50 echten Aufgabenfotos als erste Testbasis.
+2. **Prototyp der geführten Nachhilfestunde** (Foto → Thema → Kurz-Check → Hausaufgabe begleiten → Üben → Minitest) mit 20–50 echten Aufgabenfotos als erste Testbasis.
 3. **Testfamilien gewinnen** (z. B. Mitarbeiterkinder) und eine Mathe-Lehrkraft als Didaktik-Partner.
 4. **Rechtliche Erstberatung** (DSGVO bei Kindern, AI Act, Urheberrecht Schulbücher).
 5. **Name, Figur, Markenauftritt** skizzieren.
