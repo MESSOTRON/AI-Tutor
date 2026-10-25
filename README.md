@@ -5,3 +5,4 @@ KI-gestützte Nachhilfe-Plattform für Schüler:innen, die dem echten Unterricht
 ## Dokumente
 
 - [Konzept & Machbarkeitsstudie](docs/konzept-machbarkeitsstudie.md): Zielbild, Module, Didaktik, Architektur, Machbarkeit, Grenzen, Recht, Kosten, Wettbewerb, Roadmap und Gesamteinschätzung (Stand 25.10.2026)
+- [Marktrecherche: Gibt es das schon?](docs/marktrecherche-bestehende-ki-tutoren.md): bestehende KI-Tutoren, bei denen Kinder mit der KI sprechen und eigene Aufgaben hochladen (Knowunity, StudySmarter, Duden/Cornelsen, Klett, ChatGPT, Gemini, telli, Duolingo, Ello u. a.), Lücken und Folgen für das Konzept (Stand 25.10.2026)

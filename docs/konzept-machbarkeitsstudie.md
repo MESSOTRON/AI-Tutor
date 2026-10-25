@@ -1,6 +1,6 @@
 # KI-Tutor – Konzept & Machbarkeitsstudie
 
-**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.1 (Diskussionsgrundlage)
+**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.2 (Diskussionsgrundlage, Wettbewerb nach Marktrecherche aktualisiert)
 
 ---
 
@@ -16,7 +16,7 @@
 | Ist sie technisch machbar? | **Ja, zum Großteil schon heute.** Etwa 80 % der Vision lassen sich mit heute verfügbarer Technik bauen. Schwierig ist weniger die KI selbst als das, was drumherum nötig ist: Lehrplandaten, didaktische Qualität, Fehlerkontrolle, Datenschutz für Kinder und Kosten pro Nutzer. |
 | Was geht (noch) nicht? | Eine „allwissende, fehlerfreie“ KI gibt es nicht. Fotorealistische Video-Avatare in Echtzeit sind für ein Endkunden-Abo heute zu teuer. KI-generierte Klassenzimmer-Videos in Echtzeit sind noch nicht praxistauglich. |
 | Ist es ein Selbstläufer? | **Nein.** Der Markt ist voll: Knowunity, Cornelsen/Duden, Klett, simpleclub, StudySmarter, Khanmigo sowie die kostenlosen Lernmodi von ChatGPT, Gemini und Claude. Den Unterschied machen Fokus, didaktische Qualität, Vertrauen der Eltern und der Vertrieb. |
-| Empfehlung | **Bauen, aber fokussiert:** Start mit **Mathematik Klasse 5–10** in **einem Bundesland**. Stärkstes Alleinstellungsmerkmal: der Abgleich mit dem echten Unterricht plus ein **Klassenarbeits-Trainer**. Avatar als **gezeichnete Figur** (günstig, kindgerecht), kein fotorealistischer Mensch. Erst ein Prototyp mit 15–30 Test-Kindern, dann die Entscheidung über das große Budget. |
+| Empfehlung | **Bauen, aber fokussiert:** Start mit **Mathematik Klasse 5–10** in **einem Bundesland**. Foto-Upload, Chat, Sprache und Klassenarbeits-Plan sind inzwischen Standard (siehe [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md)). Der Unterschied muss aus dem Gedächtnis über das Schuljahr, der didaktischen Tiefe und einem sprechenden, figurbasierten Tutor kommen, voraussichtlich mit Fokus auf **jüngere Kinder (ca. 8–13)**, die von ChatGPT & Co. weitgehend ausgeschlossen sind. Avatar als **gezeichnete Figur** (günstig, kindgerecht), kein fotorealistischer Mensch. Erst ein Prototyp mit 15–30 Test-Kindern, dann die Entscheidung über das große Budget. |
 
 **Ampel nach Bausteinen** (Details in Kapitel 5):
 
@@ -106,9 +106,9 @@ Dieses Szenario lässt sich mit heutiger Technik vollständig bauen.
 - Einstellungen: Zeitlimits, erlaubte Fächer, Datenschutz, Löschung.
 - Bewusst **keine Chat-Protokolle als Standard**, damit das Kind dem Tutor gegenüber ehrlich bleibt. Ausnahme: Sicherheitsereignisse (Kap. 6).
 
-### 2.9 Klassenarbeits-Trainer (vermutlich die stärkste Einzelfunktion)
+### 2.9 Klassenarbeits-Trainer (Pflichtfunktion, kein Alleinstellungsmerkmal)
 - Termin und Themen fotografieren oder eingeben. Daraus entsteht ein **Lernplan bis zur Arbeit**, mit einer Probearbeit unter Zeitdruck, Auswertung und gezielter Nacharbeit.
-- Das ist der Moment, in dem Eltern zahlen, und das klarste Nutzenversprechen für die Vermarktung.
+- Das ist der Moment, in dem Eltern zahlen, und ein klares Nutzenversprechen. Knowunity bietet Lernpläne bis zum Prüfungstermin und KI-bewertete Probeklausuren aber bereits an (siehe [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md)). Die Funktion muss also da sein, unterscheidet uns aber nicht.
 
 ---
 
@@ -305,21 +305,24 @@ flowchart LR
 
 | Anbieter | Was sie machen | Stärke | Lücke / Angriffspunkt |
 |---|---|---|---|
-| **Knowunity** (Berlin) | Lern-App mit KI-Tutor, nach eigenen Angaben 20 Mio.+ Nutzer, Series B 27 Mio. € (2025) | Reichweite bei Schüler:innen, Community-Inhalte | Fokus auf Inhalte von Schüler:innen für Schüler:innen, eher Hilfe für Einzelaufgaben als ein strukturiertes Tutoring über das Schuljahr |
+| **Knowunity** (Berlin) | Lern-App mit KI-Begleiter: 24/7-Chat mit Sprachmodus, Foto-Scan jeder Aufgabe, Upload eigener PDFs/Fotos/Notizen, Lernplan bis zur Prüfung nach Lehrplan, KI-bewertete Probeklausuren. Nach eigenen Angaben 30 Mio.+ Schüler:innen, Series B 27 Mio. € (2025) | Reichweite, Funktionsumfang, Kern kostenlos | **Der direkte Maßstab.** Keine sprechende Figur bekannt; wie tief Didaktik, Gedächtnis und Elternrolle gehen, ist ungeprüft |
 | **Cornelsen / Duden Learnattack** | KI-Tutor „Kim“ (auch per WhatsApp), Übernahme des KI-Startups ezri (2025) | Verlagsinhalte, Marke | Verlagslogik, eigene Bücher im Fokus |
 | **Klett** (x Studyly) | KI-LernCoach Mathe mit Analyse einzelner Rechenschritte (didacta 2026) | Didaktische Qualität, Lehrwerksbindung | Vor allem an eigene Lehrwerke gebunden |
 | **simpleclub, StudySmarter, sofatutor** | Videos, Karteikarten, Lernpläne, zunehmend mit KI | Inhalte, Bekanntheit | Erklär-Content statt persönlicher Tutor |
 | **Khanmigo** (USA) | Sokratischer KI-Tutor | Didaktik, Preis | Kein deutscher Lehrplan |
-| **ChatGPT / Gemini / Claude** mit Lernmodi | Universal-KI mit Foto-Upload und Lernmodus | Kostenlos, sehr leistungsfähig, allgegenwärtig | Kein Schülermodell über das Schuljahr, kein Lehrplanbezug, keine Elternsicht, Datenschutzbedenken bei Kindern |
+| **ChatGPT / Gemini / Claude** mit Lernmodi | Universal-KI mit Sprache, Foto-Upload und Lernmodus. Seit 18.08.2026 „ChatGPT for Teens“ mit Study Mode als Standard, Lernzeiten und Elternkontrollen | Kostenlos, sehr leistungsfähig, allgegenwärtig | Kein Lehrplanbezug, kein Schuljahres-Gedächtnis zum Unterricht. **Altersgrenzen:** ChatGPT ab 13, Claude ab 18, Gemini für Kinderkonten im EWR laut Drittquelle nicht verfügbar |
+| **telli, fobizz** (über Schulen) | KI-Chat für Unterricht und Lernende, Landeslizenzen, EU-Hosting | Kostenlos für Schulen, datenschutzkonform | Auf den Unterricht ausgerichtet, kein persönlicher Nachmittags-Tutor |
 
-**Die eigentliche Konkurrenz sind die kostenlosen Universal-KIs.** Jedes Kind kann heute ein Aufgabenfoto in ChatGPT laden. Die Plattform muss also klar mehr bieten als „Foto rein, Erklärung raus“.
+**Die eigentliche Konkurrenz sind Knowunity und die kostenlosen Universal-KIs.** Jedes Kind ab 13 kann heute ein Aufgabenfoto in ChatGPT laden, und Knowunity deckt Foto, Chat, Sprache und Prüfungsplan bereits ab. Die Plattform muss also klar mehr bieten als „Foto rein, Erklärung raus“. Details: [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md).
 
-**Mögliche Alleinstellungsmerkmale (in dieser Reihenfolge):**
-1. **Unterrichts-Synchronität + Gedächtnis über das ganze Schuljahr:** Der Tutor weiß, was gerade dran ist, was das Kind kann und was in der nächsten Arbeit kommt.
-2. **Klassenarbeits-Trainer** mit Lernplan und Probearbeit.
-3. **Didaktisch sichere Hilfe statt Lösungsmaschine.** Das Versprechen an die Eltern: „Ihr Kind lernt wirklich.“
+**Mögliche Alleinstellungsmerkmale (in dieser Reihenfolge, nach Marktrecherche überarbeitet):**
+1. **Für jüngere Kinder gebaut (ca. 8–13):** sprechende Figur, Tafel, wenig Text, Einwilligung und Steuerung durch die Eltern. Diese Altersgruppe bedienen die Universal-KIs wegen ihrer Altersgrenzen kaum.
+2. **Unterrichts-Synchronität + Gedächtnis über das ganze Schuljahr:** Der Tutor weiß, was gerade dran ist, was das Kind kann und was in der nächsten Arbeit kommt.
+3. **Didaktisch geführte Lerneinheiten statt Frage-Antwort.** Das Versprechen an die Eltern: „Ihr Kind lernt wirklich.“
 4. **Vertrauen:** deutsch, DSGVO-konform, kein Training auf Kinderdaten, Eltern-Cockpit.
 5. **Erlebnis:** Maskottchen, Stimme, Tafel, Hobby-Bezug. Das ist der Grund, warum Kinder freiwillig wiederkommen.
+
+Der **Klassenarbeits-Trainer** bleibt eine wichtige Funktion, ist aber im Markt bereits vorhanden und daher kein Alleinstellungsmerkmal.
 
 ---
 
