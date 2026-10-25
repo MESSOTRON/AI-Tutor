@@ -1,6 +1,6 @@
 # KI-Tutor – Konzept & Machbarkeitsstudie
 
-**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.3 (Diskussionsgrundlage; Kernprodukt „geführte Nachhilfestunde“ geschärft)
+**Arbeitstitel:** KI-Tutor · **Stand:** 25.10.2026 · **Version:** 0.4 (Diskussionsgrundlage; Lernbegleitung über das Schuljahr und Mehrsprachigkeit ergänzt)
 
 ---
 
@@ -9,6 +9,10 @@
 **Die Idee:** Eine KI-Nachhilfe-Plattform für Schüler:innen, die sich am *tatsächlichen* Unterricht orientiert. Die Kinder fotografieren Hefteinträge, Arbeitsblätter, Hausaufgaben und Schulbuchseiten. Daraus erkennt die KI, was gerade im Unterricht dran ist. Sie gleicht das mit dem Lehrplan ab, stellt passende Übungen, kontrolliert Hausaufgaben, erklärt bei Fehlern nach und zeigt am Beispiel der Hobbys des Kindes, wofür man den Stoff im echten Leben braucht. Erklärt wird per Sprache, mit einer Figur (Avatar) und einer digitalen Tafel.
 
 **Der Kern ist Nachhilfe, keine Lern-App:** Das Kind kommt aus der Schule, öffnet die App und fotografiert Hefteintrag und Hausaufgaben. Ab da **führt der Tutor**: Er wiederholt den Stoff, begleitet die Hausaufgaben, gibt Übungsaufgaben und schließt mit einem Minitest ab, wie eine Nachhilfelehrkraft. Das Kind muss keine Inhalte aus Katalogen auswählen und keinem vorgefertigten Strukturplan folgen. Der heutige Unterricht bestimmt das Thema (Kap. 2.0).
+
+**ChatGPT löst den Einzelfall, die Plattform begleitet das Kind:** Eine einzelne Aufgabe kann auch eine Universal-KI erklären. Die Plattform dagegen ist darauf ausgelegt, den **Lernstand des Kindes zu erfassen und über das Schuljahr hinweg gezielt zu fördern**. Sie kennt Stundenplan und anstehende Tests, plant die Vorbereitung, kontrolliert Hausaufgaben und prüft regelmäßig, ob das Wissen sitzt.
+
+**Option Mehrsprachigkeit:** Kinder, die im deutschsprachigen Unterricht kaum mitkommen, bekommen den Schulstoff in ihrer Herkunftssprache erklärt, als Brücke zum Deutschen (Kap. 2.10).
 
 **Kurzfazit:**
 
@@ -35,6 +39,7 @@
 | Fotorealistischer Live-Avatar | 🟡 (technisch möglich, wirtschaftlich schwierig) |
 | KI-generiertes Klassenzimmer-Video live | 🔴 (heute nicht wirtschaftlich) |
 | Anpassung an Lernstand und Tempo | 🟡 (machbar, braucht Daten und Feintuning) |
+| Erklärungen in Herkunftssprachen | 🟢 große Sprachen · 🟡 kleinere Sprachen |
 | „Allwissend und fehlerfrei“ | 🔴 (nicht erreichbar, Produkt muss mit Fehlern umgehen können) |
 
 ---
@@ -57,20 +62,25 @@ Dieses Szenario lässt sich mit heutiger Technik vollständig bauen.
 
 ## 2. Kernprodukt und Funktionsumfang
 
-### 2.0 Kernprodukt: die geführte Nachhilfestunde
+### 2.0 Kernprodukt: Nachhilfe auf zwei Ebenen
 
-**Lern-App oder Nachhilfe?** Bestehende Angebote wie Knowunity sind eigenständige Lernplattformen: Das Kind wählt Inhalte aus Katalogen oder legt einen Lernplan an und folgt dann einem vorgefertigten Strukturplan. Hochladen ist möglich, aber das Kind muss selbst wissen, was es tun will. Unser Ansatz dreht das um:
+**Universal-KI, Lern-App oder Nachhilfe?** Eine Universal-KI wie ChatGPT erklärt eine einzelne Aufgabe gut, kennt aber weder das Kind noch seinen Unterricht. Lern-Apps wie Knowunity sind eigenständige Lernplattformen: Das Kind wählt Inhalte aus Katalogen oder legt einen Lernplan an und folgt dann einem vorgefertigten Strukturplan. Hochladen ist möglich, aber das Kind muss selbst wissen, was es tun will. Unser Ansatz ist ein anderer:
 
-| | Lern-App / Lernplattform | Unser Ansatz: Nachhilfe |
-|---|---|---|
-| **Wer bestimmt das Thema?** | Das Kind, per Auswahl aus Katalogen oder Lernplan | Der heutige Unterricht: Was das Kind fotografiert, ist das Thema |
-| **Wer führt?** | Das Kind steuert, die App folgt einem vorgefertigten Strukturplan | Der Tutor führt Schritt für Schritt, wie eine Nachhilfelehrkraft |
-| **Typischer Einstieg** | „Was willst du lernen?“ | „Zeig mir, was ihr heute gemacht habt.“ |
-| **Hausaufgaben** | Einzelne Aufgabe scannen, Lösungsweg ansehen | Kind löst selbst, Tutor begleitet und kontrolliert |
-| **Ende** | offen | Minitest, kurze Zusammenfassung, Plan für die nächste Wiederholung |
-| **Für wen?** | Kinder, die sich selbst organisieren können | gerade auch Kinder, die Struktur brauchen, also die typischen Nachhilfe-Kinder |
+| | Universal-KI (z. B. ChatGPT) | Lern-App / Lernplattform | Unser Ansatz: Nachhilfe |
+|---|---|---|---|
+| **Wer bestimmt das Thema?** | Das Kind fragt, was es gerade braucht | Das Kind, per Auswahl aus Katalogen oder Lernplan | Der heutige Unterricht: Was das Kind fotografiert, ist das Thema |
+| **Wer führt?** | Das Kind fragt, die KI antwortet | Das Kind steuert, die App folgt einem vorgefertigten Strukturplan | Der Tutor führt Schritt für Schritt, wie eine Nachhilfelehrkraft |
+| **Typischer Einstieg** | „Wie geht diese Aufgabe?“ | „Was willst du lernen?“ | „Zeig mir, was ihr heute gemacht habt.“ |
+| **Hausaufgaben** | Lösung oder Lösungsweg | Einzelne Aufgabe scannen, Lösungsweg ansehen | Kind löst selbst, Tutor begleitet und kontrolliert |
+| **Lernstand** | keiner, jedes Gespräch steht für sich | Fortschritt innerhalb der App-Inhalte | Lernstand über das Schuljahr, aus Unterricht, Hausaufgaben und Minitests |
+| **Planung** | keine | Lernplan nach Eingabe | Stundenplan und Testtermine; Vorbereitung und Wiederholung plant der Tutor |
+| **Für wen?** | Kinder (ab 13), die wissen, was sie fragen wollen | Kinder, die sich selbst organisieren können | gerade auch Kinder, die Struktur brauchen, also die typischen Nachhilfe-Kinder |
 
-**Warum das wichtig ist:** Kinder, die Nachhilfe brauchen, scheitern oft nicht nur am Stoff. Sie wissen nicht, wo sie anfangen sollen, was sie wiederholen müssen und wann sie etwas wirklich können. Eine Lernplattform setzt genau diese Selbststeuerung voraus. Eine geführte Stunde nimmt sie dem Kind ab und baut sie nach und nach auf.
+**Warum das wichtig ist:** Kinder, die Nachhilfe brauchen, scheitern oft nicht nur am Stoff. Sie wissen nicht, wo sie anfangen sollen, was sie wiederholen müssen und wann sie etwas wirklich können. Eine Lernplattform setzt genau diese Selbststeuerung voraus. Die Plattform nimmt sie dem Kind ab und baut sie nach und nach auf, auf zwei Ebenen:
+- **Ebene 1, jeden Tag:** die geführte Nachhilfestunde zum heutigen Stoff.
+- **Ebene 2, über das Schuljahr:** die Lernbegleitung, die den Lernstand erfasst, Tests vorbereitet und prüft, ob das Wissen sitzt.
+
+#### Ebene 1: Die geführte Nachhilfestunde
 
 **Ablauf einer Stunde** (ca. 20–40 Minuten):
 
@@ -92,11 +102,28 @@ Dieses Szenario lässt sich mit heutiger Technik vollständig bauen.
 - **Heute keine Hausaufgaben:** Die Stunde läuft mit dem Hefteintrag, also Wiederholen, Üben und Minitest.
 - **Nichts fotografiert:** Der Tutor fragt nach dem Thema oder schlägt eine fällige Wiederholung vor.
 
-**Zwischen den Stunden:** Minitest-Ergebnisse und Fehler fließen ins Schülermodell (2.3). Daraus entstehen das Aufwärmen der nächsten Stunde, die Wiederholungen und später der Klassenarbeits-Plan (2.9). So baut sich der Lernstand über das Schuljahr automatisch aus dem echten Unterricht auf, ohne dass das Kind etwas aus Katalogen auswählen muss.
-
 **Technische Folge:** Die Stunde wird von einer festen Ablaufsteuerung im Tutor-Orchestrator gelenkt (Kap. 4.1), nicht von einem freien Chat. Das Sprachmodell füllt die Phasen mit Inhalt, die Struktur gibt der Code vor. Das macht die Stunde verlässlich und messbar.
 
-Die folgenden Module 2.1–2.9 sind die Bausteine dieser Stunde.
+#### Ebene 2: Lernbegleitung über das Schuljahr
+
+Diese Ebene unterscheidet die Plattform von einer Universal-KI. Sie läuft im Hintergrund jeder Stunde mit und ist für Kind und Eltern sichtbar. Minitest-Ergebnisse, Hausaufgaben und Fehler fließen ins Schülermodell (2.3). So baut sich der Lernstand automatisch aus dem echten Unterricht auf, ohne dass das Kind etwas aus Katalogen auswählen muss.
+
+| Baustein | Was passiert |
+|---|---|
+| **Lernstand erfassen** | Zum Start ein kurzer, spielerischer Einstiegs-Check pro Fach (ca. 10 Minuten) mit den Kernkompetenzen der aktuellen und der vorherigen Klassenstufe. Danach wird der Lernstand mit jeder Stunde, jedem Minitest und jeder Hausaufgabe fortgeschrieben. |
+| **Stundenplan** | Einmal eintragen oder fotografieren. Der Tutor weiß dann, welche Fächer heute dran waren, und fragt gezielt: *„Heute hattest du Mathe und Englisch. Was habt ihr gemacht?“* |
+| **Tests und Klassenarbeiten** | Termine eintragen oder das Hausaufgabenheft fotografieren. Der Tutor plant rückwärts: Welche Themen kommen dran, was sitzt schon, was muss bis wann wiederholt werden? (Klassenarbeits-Trainer, 2.9) |
+| **Wochenplan** | Aus Stundenplan, Hausaufgaben, Terminen und fälligen Wiederholungen entsteht ein Vorschlag für die Woche: welcher Tag, wie lange, welches Fach. |
+| **Prüfen, ob das Wissen sitzt** | Minitest am Ende jeder Stunde, Wiederholungsfragen nach der Vergessenskurve, kurze Probearbeiten vor Tests. Ein Thema gilt erst als sicher, wenn das Kind es mehrmals mit zeitlichem Abstand selbstständig löst. |
+| **Lücken von früher schließen** | Gehen Fehler auf fehlendes Vorwissen zurück (z. B. Bruchrechnung in Klasse 8), plant der Tutor kurze Nachhol-Einheiten ein, verteilt über mehrere Tage. |
+| **Übergeordnet fördern** | Über den Stoff hinaus: Lernstrategien (Wie lerne ich Vokabeln? Wie gehe ich eine Textaufgabe an?), Selbstorganisation (Hausaufgaben planen, für Tests einteilen) sowie Lesen und Textverständnis als Grundlage aller Fächer. Ziel ist, dass das Kind den Tutor mit der Zeit weniger braucht. |
+| **Eltern** | Wochenbericht: Was war dran, was sitzt, wo hakt es, welche Tests stehen an, wie sieht der Plan aus (2.8). |
+
+Stundenplan und Testtermine einzutragen, kennen Kinder bereits aus Lern-Apps wie Knowunity, und das funktioniert dort gut. Wir übernehmen es, verbinden es aber mit der geführten Stunde und dem Lernstand. Der Plan entsteht dann aus dem echten Unterricht und dem, was das Kind tatsächlich kann.
+
+**Warum das schwer zu kopieren ist:** Eine Universal-KI beantwortet die Frage von heute gut. Sie kennt aber weder den Stundenplan noch die Klassenarbeit nächste Woche noch die Lücke aus Klasse 6. Dieses Wissen über das Kind und seinen Unterricht wächst mit jedem Schultag und ist der eigentliche Wert der Plattform.
+
+Die folgenden Module 2.1–2.10 sind die Bausteine dieser beiden Ebenen.
 
 ### 2.1 Stoff-Erfassung (Foto-Input)
 - **Was rein kann:** Buchseiten, Arbeitsblätter, Hefteinträge, Tafelbilder, Hausaufgaben, korrigierte Klassenarbeiten.
@@ -152,6 +179,37 @@ Die folgenden Module 2.1–2.9 sind die Bausteine dieser Stunde.
 ### 2.9 Klassenarbeits-Trainer (Pflichtfunktion, kein Alleinstellungsmerkmal)
 - Termin und Themen fotografieren oder eingeben. Daraus entsteht ein **Lernplan bis zur Arbeit**, mit einer Probearbeit unter Zeitdruck, Auswertung und gezielter Nacharbeit.
 - Das ist der Moment, in dem Eltern zahlen, und ein klares Nutzenversprechen. Knowunity bietet Lernpläne bis zum Prüfungstermin und KI-bewertete Probeklausuren aber bereits an (siehe [Marktrecherche](marktrecherche-bestehende-ki-tutoren.md)). Die Funktion muss also da sein, unterscheidet uns aber nicht.
+
+### 2.10 Mehrsprachige Nachhilfe: Schulstoff in der Herkunftssprache
+
+**Das Problem:** Viele Kinder kommen im Unterricht nicht mit, weil sie ihn sprachlich nicht verstehen, und nicht, weil sie den Stoff nicht könnten. Rund **29 %** der Schüler:innen an allgemeinbildenden Schulen haben eine Einwanderungsgeschichte (2023), in NRW sind es im Schuljahr 2025/26 **44,6 %**. Schätzungsweise 18 % der Kinder und Jugendlichen sprechen zu Hause neben Deutsch mindestens eine weitere Sprache. Dazu kommen rund **227.000 ukrainische Schüler:innen** (Mitte 2025). Die Eltern können oft auch nicht helfen, weil sie selbst wenig Deutsch sprechen.
+
+**Die Idee:** Der Tutor erklärt den deutschen Schulstoff in der Herkunftssprache des Kindes, aber als **Brücke zum Deutschen**, nicht als Ersatz. Unterricht, Tests und Klassenarbeiten bleiben auf Deutsch, das Kind muss also die deutschen Fachbegriffe und Aufgabentexte beherrschen. Das Prinzip entspricht dem sprachsensiblen Fachunterricht: Inhalt in der eigenen Sprache verstehen, Fachsprache auf Deutsch lernen.
+
+| Stufe | So arbeitet der Tutor |
+|---|---|
+| **1. Einstieg** | Erklärung in der Herkunftssprache. Deutsche Fachbegriffe werden hervorgehoben und in einem zweisprachigen Glossar gesammelt („Zähler“, „Nenner“, „kürzen“). |
+| **2. Brücke** | Gemischte Erklärung. Aufgaben kommen auf Deutsch, eine Übersetzung gibt es auf Tipp. Bei Textaufgaben hilft der Tutor zuerst, den deutschen Text zu verstehen, und erst dann beim Rechnen. |
+| **3. Deutsch** | Unterricht auf Deutsch, die Herkunftssprache nur noch bei Bedarf. |
+
+Der Tutor wechselt die Stufe von selbst, sobald das Kind sicherer wird, und misst dafür auch den Fortschritt im fachlichen Deutsch.
+
+**Beispiel:** Amir, 6. Klasse, seit einem Jahr in Deutschland, spricht Arabisch. Er fotografiert den Hefteintrag zur Bruchrechnung. Fin erklärt auf Arabisch, schreibt an der Tafel „Zähler“ und „Nenner“ dazu und lässt Amir die Begriffe nachsprechen. Die Übungsaufgaben kommen auf Deutsch, die Übersetzung gibt es auf Tipp. Amirs Eltern bekommen den Wochenbericht auf Arabisch.
+
+**Machbarkeit:**
+- 🟢 **Große Sprachen** (Ukrainisch, Russisch, Arabisch, Türkisch, Polnisch, Persisch): Heutige Sprachmodelle erklären darin gut. Spracherkennung und Sprachausgabe sind verfügbar.
+- 🟡 **Kleinere Sprachen** (z. B. Dari, Paschtu, Tigrinya, Kurmandschi, Somali): Text, Spracherkennung und Stimme sind schwächer und müssen vor dem Einsatz mit Muttersprachler:innen geprüft werden. Gesprochene arabische Dialekte sind schwieriger als Hocharabisch.
+- **Didaktische Feinheiten:** Rechenverfahren und Schreibweisen unterscheiden sich zwischen Ländern (z. B. schriftliche Division, Dezimalkomma). Der Tutor muss das deutsche Verfahren lehren und das bekannte trotzdem anerkennen. Für Arabisch und Persisch braucht die App Rechts-nach-links-Text mit eingebetteten Formeln.
+- **Kosten:** pro Nutzer kaum höher, weil die Sprachmodelle ohnehin mehrsprachig sind. Der Aufwand liegt in der Qualitätssicherung je Sprache (geprüfte Glossare, Testfälle, Prüfung durch Muttersprachler:innen).
+
+**Markt und Vertrieb:** In einer kurzen Recherche habe ich kein Angebot gefunden, das deutschen Schulstoff geführt in der Herkunftssprache vermittelt. ChatGPT kann es im Einzelfall, wenn das Kind auf Arabisch fragt, aber ohne Struktur und erst ab 13. Familien in dieser Lage können oft wenig zahlen. Der passende Kanal sind daher eher **Kommunen, Integrationsprogramme, Schulen mit hohem Anteil an Kindern mit wenig Deutschkenntnissen (z. B. Startchancen-Schulen) und Träger von Vorbereitungsklassen**. Die soziale Wirkung ist zugleich ein starkes Argument für Fördermittel.
+
+**Risiken:**
+- Das Kind bleibt in der Herkunftssprache stecken. Dagegen helfen das Stufenprinzip und die Messung des Fortschritts im Deutschen.
+- Fachbegriffe werden falsch übersetzt. Dagegen helfen geprüfte Glossare.
+- Beispiele passen kulturell nicht. Dagegen hilft eine Prüfung durch Muttersprachler:innen.
+
+**Empfehlung:** Die Architektur von Anfang an mehrsprachig anlegen, das kostet wenig. In Phase 2 einen Pilot mit zwei Sprachen starten (z. B. Ukrainisch und Arabisch), gemeinsam mit einer Kommune oder einer Schule.
 
 ---
 
@@ -249,6 +307,7 @@ flowchart LR
 | Mathe-Lösungen korrigieren | Sehr gut mit CAS | 🟢 | Ohne Prüfwerkzeug Restfehler im Prozentbereich |
 | Freitext bewerten (Deutsch, Geschichte, Bio-Erklärungen) | Gut | 🟡 | Feedback ja, Noten-ähnliche Bewertung vorsichtig |
 | Fremdsprachen (Vokabeln, Grammatik, Aussprache) | Gut bis sehr gut | 🟢 | Aussprachetraining per Sprache möglich |
+| Schulstoff in der Herkunftssprache erklären | Gut bei großen Sprachen, schwächer bei kleinen | 🟢/🟡 | Glossare und Prüfung durch Muttersprachler:innen je Sprache (Kap. 2.10) |
 | Erklärungen, Praxisbezug, Hobbys | Sehr gut | 🟢 | Stärke heutiger Sprachmodelle |
 | Sprachdialog in Echtzeit, Deutsch | Gut | 🟢 | Kinderstimmen etwas schwieriger |
 | Gezeichneter Avatar mit Lippensynchronität | Ausgereift | 🟢 | Einmaliger Design-Aufwand |
@@ -341,6 +400,7 @@ flowchart LR
 - **Nachhilfe-Institute** als B2B-Kunden (KI-Tutor für die Zeit zwischen den Präsenzstunden).
 - **Arbeitgeber-Benefit** („Lernhilfe für Mitarbeiterkinder“), naheliegend auch für die eigenen Unternehmen.
 - **Schulen und Kommunen**, z. B. über das Startchancen-Programm. Dafür ist die Hochrisiko-Compliance nach AI Act Voraussetzung (Kap. 7.2).
+- **Kommunen und Integrationsprogramme** für die mehrsprachige Nachhilfe (Kap. 2.10), finanziert über Förderprogramme statt über das Familienbudget.
 
 ---
 
@@ -360,10 +420,11 @@ flowchart LR
 
 **Mögliche Alleinstellungsmerkmale (in dieser Reihenfolge, nach Marktrecherche und eigenem Test überarbeitet):**
 1. **Geführte Nachhilfestunde zum heutigen Unterrichtsstoff (Kap. 2.0):** Das Kind fotografiert, der Tutor führt durch Wiederholung, Hausaufgaben, Übungen und Minitest. Es wählt nichts aus Katalogen aus. Das Versprechen an die Eltern: „Wie eine Nachhilfestunde, jeden Tag, zum Stoff von heute.“
-2. **Gedächtnis über das ganze Schuljahr:** Der Tutor weiß aus den Stunden, was dran war, was das Kind kann und was in der nächsten Arbeit kommt.
+2. **Lernbegleitung über das Schuljahr (Kap. 2.0, Ebene 2):** Der Tutor erfasst den Lernstand, kennt Stundenplan und Testtermine, plant die Vorbereitung, schließt Lücken aus früheren Klassen und prüft regelmäßig, ob das Wissen sitzt. Das kann eine Universal-KI, die nur den Einzelfall löst, nicht.
 3. **Für jüngere Kinder gebaut (ca. 8–13):** sprechende Figur, Tafel, wenig Text, Einwilligung und Steuerung durch die Eltern. Diese Altersgruppe bedienen die Universal-KIs wegen ihrer Altersgrenzen kaum.
 4. **Vertrauen:** deutsch, DSGVO-konform, kein Training auf Kinderdaten, Eltern-Cockpit.
 5. **Erlebnis:** Maskottchen, Stimme, Tafel, Hobby-Bezug. Das ist der Grund, warum Kinder freiwillig wiederkommen.
+6. **Mehrsprachig (Ausbaustufe):** deutscher Schulstoff in der Herkunftssprache als Brücke zum Deutschen (Kap. 2.10). Ein solches Angebot habe ich bisher nicht gefunden.
 
 Der **Klassenarbeits-Trainer** bleibt eine wichtige Funktion, ist aber im Markt bereits vorhanden und daher kein Alleinstellungsmerkmal.
 
@@ -396,12 +457,13 @@ Der **Klassenarbeits-Trainer** bleibt eine wichtige Funktion, ist aber im Markt 
 - **Entscheidungspunkt:** weitermachen, anpassen oder stoppen.
 
 ### Phase 1: MVP / geschlossene Beta (4–6 Monate)
-- Mathe 5–10, Schülermodell, Klassenarbeits-Trainer, animiertes Maskottchen, Tafel, Eltern-Cockpit, Einwilligungsprozess, DSFA.
+- Mathe 5–10, geführte Stunde, Schülermodell mit Einstiegs-Check, Stundenplan und Testtermine, Klassenarbeits-Trainer, animiertes Maskottchen, Tafel, Eltern-Cockpit, Einwilligungsprozess, DSFA. Architektur bereits mehrsprachig angelegt.
 - 200–1.000 Beta-Familien, wenn möglich mit einer kleinen Wirksamkeitsstudie (Vor- und Nachtest).
 - **Team:** Produktverantwortung, 2–3 Entwicklung (App, Backend, KI), 1 Didaktik, Design (extern), Recht/Datenschutz (extern). **Budget grob 250–450 T€.**
 
 ### Phase 2: Marktstart und Ausbau (6–12 Monate)
 - Weitere Fächer (Englisch, Deutsch, Physik, Chemie, Biologie), weitere Bundesländer, Video-Bibliothek für Praxisbezüge, Spielwelt.
+- Pilot mehrsprachige Nachhilfe mit zwei Sprachen (z. B. Ukrainisch und Arabisch), gemeinsam mit einer Kommune oder Schule (Kap. 2.10).
 - Bezahl-Abo, Marketing, B2B-Pilot mit Nachhilfe-Instituten oder Arbeitgebern.
 - **Budget** stark abhängig vom Marketing: grob 0,5–1,5 Mio. € zusätzlich.
 
@@ -458,6 +520,9 @@ Das Vorhaben ist ein eigenständiges Software- und Verbraucher-Geschäft und unt
 **Markt**
 - Bertelsmann Stiftung, Ausgaben für Nachhilfe: [PDF](https://bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/GP_Ausgaben_fuer_Nachhilfe.pdf)
 - news4teachers (2024) zur Studienkreis-/Forsa-Umfrage: [Link](https://www.news4teachers.de/2024/08/die-haelfte-der-eltern-sieht-nachhilfe-als-stuetze-des-bildungssystems-neun-von-zehn-fordern-gratis-nachhilfe-fuer-alle/)
+- Schüler:innen mit Einwanderungsgeschichte (29 %, 2023): [t-online/dpa](https://www.t-online.de/nachrichten/deutschland/id_100481400/jeder-dritte-schueler-hat-einwanderungsgeschichte.html) · NRW 2025/26 (44,6 %): [news4teachers](https://www.news4teachers.de/2026/09/knapp-die-haelfte-der-schueler-in-nordrhein-westfalen-hat-eine-migrationsgeschichte/)
+- Mehrsprachigkeit in Familien (ca. 18 %): [Mediendienst Integration / Robert Bosch Stiftung, Expertise 2025](https://www.bosch-stiftung.de/sites/default/files/publications/pdf/2025-05/Mediendienst_Expertise_Mehrsprachigkeit_2025.pdf)
+- Ukrainische Schüler:innen (ca. 227.000, Q2 2025): [news4teachers](https://www.news4teachers.de/2025/07/227-000-zahl-ukrainischer-schueler-in-deutschen-schulen-auf-hoechststand/)
 - Knowunity Series B: [tech.eu](https://tech.eu/2025/06/13/knowunity-raises-eur27m-to-bring-ai-tutor-to-1-billion-students/), [startbase](https://www.startbase.de/news/knowunity-mit-27-millionen-euro-series-b/)
 - Cornelsen übernimmt ezri: [cio.de](https://www.cio.de/article/3807245/cornelsen-gruppe-ubernimmt-ki-startup-ezri.html)
 - Klett didacta 2026 (KI-LernCoach): [bildungsmedien.de](https://bildungsmedien.de/images/inhalte/presse/pressemappe_didacta_2026/PM_didactaEKV.pdf)
